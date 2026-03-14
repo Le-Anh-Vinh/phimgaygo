@@ -47,12 +47,12 @@ export default function SharedLayout() {
                 open: true,
                 text: "Adding to favorite",
             });
-            addToFavorite(user.uid, {id: filmID, media_type}).then(() =>
+            addToFavorite(user.uid, { id: filmID, media_type }).then(() =>
                 setSnackbarState({
                     open: true,
                     text: "Added to favorite",
                     undoAction: () => {
-                        removeFromFavorite(user.uid, {id: filmID, media_type}).then(() => {
+                        removeFromFavorite(user.uid, { id: filmID, media_type }).then(() => {
                             setSnackbarState({
                                 open: true,
                                 text: "Undo success",
@@ -174,7 +174,7 @@ export default function SharedLayout() {
                     <div className='flex flex-row justify-center items-center'>
                         <div className='flex flex-row justify-center items-center border-2 border-main-1000 rounded-3xl p-1 px-2 mr-2'>
                             <input
-                                className='px-2 bg-transparent placeholder placeholder-white underline-offset-1 text-white focus:outline-none focus:underline hidden lg:block'
+                                className='px-2 bg-transparent placeholder placeholder-white underline-offset-1 text-white focus:outline-none focus:underline hidden lg:block search-input'
                                 placeholder='Looking for something?'
                                 type={"text"}
                                 name='search'

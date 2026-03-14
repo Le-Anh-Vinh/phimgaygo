@@ -60,8 +60,8 @@ const TVShowDetail: FC = () => {
                 className={"pt-16 sm:min-h-[90vh] w-screen"}
                 style={{
                     backgroundImage: `${window.innerWidth > 750
-                            ? "linear-gradient(to top, #000, transparent 10%), linear-gradient(to right, #000, #222222 20%, #42424200), "
-                            : ""
+                        ? "linear-gradient(to top, #000, transparent 10%), linear-gradient(to right, #000, #222222 20%, #42424200), "
+                        : ""
                         } url(${config.backDropUrl + data.data.backdrop_path})`,
                     backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
@@ -114,7 +114,7 @@ const TVShowDetail: FC = () => {
                             }}
                         >
                             <SVG_Play fill='black' />{" "}
-                            <span className={"text-black px-2"}>Watch</span>
+                            <span className={"text-black px-2 play-button-tv"}>Watch</span>
                         </button>
                         <button
                             className='p-2 m-1 rounded secondary flex'

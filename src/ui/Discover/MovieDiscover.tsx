@@ -194,8 +194,8 @@ const MovieDiscover: FC = () => {
                             onInputChange={(e) =>
                                 setYear(
                                     (e?.currentTarget?.textContent ?? "All") as
-                                        | number
-                                        | "All"
+                                    | number
+                                    | "All"
                                 )
                             }
                             renderInput={(params) => (
@@ -251,43 +251,43 @@ const MovieDiscover: FC = () => {
                     >
                         {genreData.data
                             ? genreData.data.genres.map((value) => {
-                                  let choosed = genres.find(
-                                      (val) => val.id === value.id
-                                  );
-                                  return (
-                                      <Chip
-                                          label={value.name}
-                                          onClick={() => {
-                                              if (choosed)
-                                                  setGenres((old) => {
-                                                      const tmp = [...old];
-                                                      tmp.splice(
-                                                          tmp.findIndex(
-                                                              (item) =>
-                                                                  item.id ===
-                                                                  value.id
-                                                          ),
-                                                          1
-                                                      );
-                                                      return tmp;
-                                                  });
-                                              else
-                                                  setGenres((old) => [
-                                                      ...old,
-                                                      value,
-                                                  ]);
-                                          }}
-                                          variant={
-                                              choosed ? "filled" : "outlined"
-                                          }
-                                          icon={
-                                              choosed ? (
-                                                  <CheckRoundedIcon />
-                                              ) : undefined
-                                          }
-                                      />
-                                  );
-                              })
+                                let choosed = genres.find(
+                                    (val) => val.id === value.id
+                                );
+                                return (
+                                    <Chip
+                                        label={value.name}
+                                        onClick={() => {
+                                            if (choosed)
+                                                setGenres((old) => {
+                                                    const tmp = [...old];
+                                                    tmp.splice(
+                                                        tmp.findIndex(
+                                                            (item) =>
+                                                                item.id ===
+                                                                value.id
+                                                        ),
+                                                        1
+                                                    );
+                                                    return tmp;
+                                                });
+                                            else
+                                                setGenres((old) => [
+                                                    ...old,
+                                                    value,
+                                                ]);
+                                        }}
+                                        variant={
+                                            choosed ? "filled" : "outlined"
+                                        }
+                                        icon={
+                                            choosed ? (
+                                                <CheckRoundedIcon />
+                                            ) : undefined
+                                        }
+                                    />
+                                );
+                            })
                             : "Loading..."}
                     </AccordionDetails>
                 </Accordion>
@@ -412,14 +412,14 @@ const MovieDiscover: FC = () => {
                     imagesFullURL={
                         window.innerWidth > 640
                             ? MovieData.data.results.map(
-                                  (value) =>
-                                      config.backDropUrlSmall +
-                                      value.backdrop_path
-                              )
+                                (value) =>
+                                    config.backDropUrlSmall +
+                                    value.backdrop_path
+                            )
                             : MovieData.data.results.map(
-                                  (value) =>
-                                      config.posterUrl + value.poster_path
-                              )
+                                (value) =>
+                                    config.posterUrl + value.poster_path
+                            )
                     }
                     tags={MovieData.data.results.map((value) =>
                         value.vote_average.toFixed(1)
@@ -482,10 +482,8 @@ interface DiscoverParams {
 
 function URLSearchconstruct(args: DiscoverParams, pathname: string) {
     return (
-        `${pathname}?page=${args.page}&adult=${args.adult}&sortby=${
-            args.sortby
-        }&order=${args.order}&year=${
-            Number(args.year) >= 1990 ? args.year : "All"
+        `${pathname}?page=${args.page}&adult=${args.adult}&sortby=${args.sortby
+        }&order=${args.order}&year=${Number(args.year) >= 1990 ? args.year : "All"
         }` +
         (args.genres.length ? `&genres=${args.genres.join(",")}` : "") +
         (args.keywords.length ? `&keywords=${args.keywords.join(",")}` : "")

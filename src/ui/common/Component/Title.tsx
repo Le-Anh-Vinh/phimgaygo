@@ -27,9 +27,8 @@ const Title: FC<{
             style={props.style}
         >
             <div
-                className={`shadow-xl rounded-sm relative cursor-pointer aspect-potrait sm:aspect-video ${
-                    props.className ?? ""
-                }`}
+                className={`shadow-xl rounded-sm relative cursor-pointer aspect-potrait sm:aspect-video ${props.className ?? ""
+                    }`}
                 style={{
                     backgroundImage: `${window.innerWidth > 640 ? 'linear-gradient(to top, #000000bb, transparent 30%), ' : ''}url(${props.imageFullURL})`,
                     backgroundSize: "cover",
@@ -91,13 +90,14 @@ const Title: FC<{
                         Genres: {props.genre}
                     </p>
 
-                    <div className={"absolute flex gap-2 bottom-0 p-4"}>
+                    <div className={"absolute flex gap-2 bottom-0 p-4 play-button"} >
                         <button
                             onClick={(e) => {
                                 e.stopPropagation()
                                 props.btn1Action()
                             }}
-                            className='w-fit h-fit p-2 rounded bg-main-1000'
+                            className='w-fit h-fit p-2 rounded bg-main-1000 play-button'
+                            id={`play-btn`}
                         >
                             {props.btn1Icon}
                         </button>

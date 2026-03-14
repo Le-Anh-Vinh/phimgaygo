@@ -61,8 +61,7 @@ const Search: FC = () => {
     );
     const searchHandle = (change: SearchParams) => {
         navController(
-            `search?query=${encodeURIComponent(change.query ?? "")}&page=${
-                change.page
+            `search?query=${encodeURIComponent(change.query ?? "")}&page=${change.page
             }&adult=${change.adult}&year=${change.year}`,
             {
                 replace: true,
@@ -101,7 +100,7 @@ const Search: FC = () => {
         <div className='mt-48 w-full'>
             <div className='p-4 flex items-center h-16 rounded-lg border-2 border-main-1000 w-[80%] mx-auto'>
                 <input
-                    className='flex-grow bg-transparent placeholder placeholder-white underline-offset-1 text-xl text-white focus:outline-none focus:underline'
+                    className='flex-grow bg-transparent placeholder placeholder-white underline-offset-1 text-xl text-white focus:outline-none focus:underline seach-input'
                     type={"text"}
                     placeholder='Looking for something'
                     value={_query}
@@ -151,8 +150,8 @@ const Search: FC = () => {
                         onInputChange={(e) =>
                             _setYear(
                                 (e?.currentTarget?.textContent ?? "All") as
-                                    | number
-                                    | "All"
+                                | number
+                                | "All"
                             )
                         }
                         renderInput={(params) => (
@@ -203,13 +202,13 @@ const Search: FC = () => {
                     genres={SearchResult.map((value) =>
                         value.media_type === "movie"
                             ? MapGenreToID(
-                                  movieGenres.data?.genres ?? [],
-                                  value.genre_ids
-                              )
+                                movieGenres.data?.genres ?? [],
+                                value.genre_ids
+                            )
                             : MapGenreToID(
-                                  tvShowGenres.data?.genres ?? [],
-                                  value.genre_ids
-                              )
+                                tvShowGenres.data?.genres ?? [],
+                                value.genre_ids
+                            )
                     )}
                     media_type={SearchResult.map((value) => value.media_type)}
                     dates={SearchResult.map((value) =>

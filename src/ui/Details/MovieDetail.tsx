@@ -34,7 +34,7 @@ const MovieDetail: FC<{}> = () => {
 
     //Add to history
     useEffect(() => {
-        user && addToHistory(user.uid, {id: Number(id), media_type: currentMediaType})
+        user && addToHistory(user.uid, { id: Number(id), media_type: currentMediaType })
     }, [user, id])
 
     if (data.error) {
@@ -47,11 +47,10 @@ const MovieDetail: FC<{}> = () => {
                     paddingTop: "64px",
                     minHeight: "90vh",
                     width: "100vw",
-                    backgroundImage: `${
-                        window.innerWidth > 750
-                            ? "linear-gradient(to top, #000, transparent 10%), linear-gradient(to right, #000, #222222 20%, #42424200), "
-                            : ""
-                    } url(${config.backDropUrl + data.data.backdrop_path})`,
+                    backgroundImage: `${window.innerWidth > 750
+                        ? "linear-gradient(to top, #000, transparent 10%), linear-gradient(to right, #000, #222222 20%, #42424200), "
+                        : ""
+                        } url(${config.backDropUrl + data.data.backdrop_path})`,
                     backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "right top",
@@ -77,12 +76,12 @@ const MovieDetail: FC<{}> = () => {
                         <p>
                             {data.data.release_dates.results.length > 0
                                 ? data.data.release_dates.results.find(
-                                      (value) => {
-                                          return value.iso_3166_1 === "US";
-                                      }
-                                  )?.release_dates[0].certification ??
-                                  data.data.release_dates.results[0]
-                                      .release_dates[0].certification
+                                    (value) => {
+                                        return value.iso_3166_1 === "US";
+                                    }
+                                )?.release_dates[0].certification ??
+                                data.data.release_dates.results[0]
+                                    .release_dates[0].certification
                                 : ""}
                         </p>
                         <p className={"mx-2"}>•</p>
@@ -102,7 +101,7 @@ const MovieDetail: FC<{}> = () => {
                             }}
                         >
                             <SVG_Play fill="black" />{" "}
-                            <span className={"text-black px-2"}>Watch</span>
+                            <span className={"text-black px-2 play-button-movie"}>Watch</span>
                         </button>
                         <button
                             className='p-2 m-1 rounded secondary flex'
@@ -178,7 +177,7 @@ const MovieDetail: FC<{}> = () => {
                                                 </Link>
                                                 <span>
                                                     {index !==
-                                                    data.data.genres.length - 1
+                                                        data.data.genres.length - 1
                                                         ? ", "
                                                         : ""}
                                                 </span>
