@@ -4,6 +4,8 @@ import { useQuery } from "react-query";
 import MovieDiscover from "../../model/Movie/MovieDiscover";
 import MovieOverview from "../../model/Movie/MovieOverview";
 
+import popularMovieIds from "../../popular_movie_ids.json";
+
 export default function MovieSearch(
     query: string,
     enable: boolean,
@@ -30,7 +32,7 @@ export default function MovieSearch(
                             ...value,
                             media_type: "movie",
                         };
-                    }),
+                    }).filter((value: MovieOverview) => popularMovieIds.includes(value.id)),
                 } as MovieDiscover;
             }),
         {

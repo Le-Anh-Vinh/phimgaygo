@@ -3,6 +3,7 @@ import config, { SortedBy, oneTimeGet } from "../../Datasource/Config";
 import { useQuery } from "react-query";
 import TVShowDiscover from "../../model/TVShow/TVShowDiscover";
 import TVShowOverview from "../../model/TVShow/TVShowOverview";
+import popularMovieIds from "../../popular_movie_ids.json";
 
 interface getTvDiscoverProps {
     page?: number;
@@ -56,7 +57,7 @@ export default function getTVDiscover({
                             ...value,
                             media_type: "tv",
                         };
-                    }),
+                    }).filter((value: TVShowOverview) => popularMovieIds.includes(value.id)),
                 } as TVShowDiscover;
             }),
         {

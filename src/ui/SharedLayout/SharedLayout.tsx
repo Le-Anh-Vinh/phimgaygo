@@ -157,12 +157,12 @@ export default function SharedLayout() {
                         >
                             <p>Movies</p>
                         </Link>
-                        <Link
+                        {/* <Link
                             className='hidden md:block font-bold text-center'
                             to={Screens.TVDiscover}
                         >
                             <p>TV Shows</p>
-                        </Link>
+                        </Link> */}
                         <Link
                             className='hidden md:block font-bold text-center'
                             to={Screens.About}

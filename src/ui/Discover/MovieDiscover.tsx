@@ -451,7 +451,7 @@ const MovieDiscover: FC = () => {
             )}
             <div className='flex justify-center my-4'>
                 <Pagination
-                    count={MovieData.data?.total_pages}
+                    count={103}
                     page={URLparams.page}
                     onChange={(_, page) =>
                         navController(
