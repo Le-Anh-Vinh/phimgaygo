@@ -129,6 +129,7 @@ const TitlesGrid: FC<
                         return (
                             <Title
                                 key={props.name + currentType + val}
+                                id={val}
                                 title={props.titles[index]}
                                 tag={props.tags?.at(index)}
                                 imageFullURL={props.imagesFullURL[index]}

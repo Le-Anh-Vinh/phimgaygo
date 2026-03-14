@@ -92,7 +92,7 @@ const MovieDetail: FC<{}> = () => {
                     <p className={"text-justify m-4"}>{data.data.overview}</p>
                     <div className={"flex flex-row mx-2"}>
                         <button
-                            className='p-2 m-1 rounded bg-main-1000 flex'
+                            className='p-2 m-1 rounded bg-main-1000 flex button-movie'
                             onClick={() => {
                                 WatchSectionRef.current?.scrollIntoView({
                                     behavior: "smooth",
@@ -101,7 +101,7 @@ const MovieDetail: FC<{}> = () => {
                             }}
                         >
                             <SVG_Play fill="black" />{" "}
-                            <span className={"text-black px-2 play-button-movie"}>Watch</span>
+                            <span className={"text-black px-2 "}>Watch</span>
                         </button>
                         <button
                             className='p-2 m-1 rounded secondary flex'

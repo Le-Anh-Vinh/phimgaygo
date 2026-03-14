@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import { media_type } from "../../../data/Datasource/Config";
 
 const Title: FC<{
+    id: number;
     title: string;
     subtitle: string;
     genre: string;
@@ -26,6 +27,7 @@ const Title: FC<{
             }
             style={props.style}
         >
+            <div id="tracking-movie-id" data-item-id={props.id} style={{ display: 'none' }}>{props.id}</div>
             <div
                 className={`shadow-xl rounded-sm relative cursor-pointer aspect-potrait sm:aspect-video ${props.className ?? ""
                     }`}
@@ -90,14 +92,14 @@ const Title: FC<{
                         Genres: {props.genre}
                     </p>
 
-                    <div className={"absolute flex gap-2 bottom-0 p-4 play-button"} >
+                    <div className={"absolute flex gap-2 bottom-0 p-4 "}>
                         <button
                             onClick={(e) => {
                                 e.stopPropagation()
                                 props.btn1Action()
                             }}
-                            className='w-fit h-fit p-2 rounded bg-main-1000 play-button'
-                            id={`play-btn`}
+                            className='w-fit h-fit p-2 rounded bg-main-1000 play-play'
+
                         >
                             {props.btn1Icon}
                         </button>

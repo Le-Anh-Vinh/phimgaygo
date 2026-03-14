@@ -159,6 +159,7 @@ const TitlesRow: FC<
                         return (
                             <Title
                                 key={props.name + currTag + id}
+                                id={id}
                                 type={
                                     props.media_type[
                                         index <= props.media_type.length
