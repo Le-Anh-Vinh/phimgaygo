@@ -6,9 +6,10 @@ import ReactPlayer from "react-player";
 import { IconButton, Skeleton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-const TraierSection: FC<{
+const TrailerSection: FC<{
     videos: Video[];
-}> = ({ videos }) => {
+    movieId: number;
+}> = ({ videos, movieId }) => {
     const [expand, setExpand] = useState(false);
     const VideoData = videos
         .filter((value) => value.site === "YouTube")
@@ -120,6 +121,7 @@ const TraierSection: FC<{
                 >
                     {VideoData.map((value, index) => (
                         <div
+                            id="trailer-player"
                             onClick={(e) => {
                                 setShowBigPlayer(index);
                             }}
@@ -145,6 +147,7 @@ const TraierSection: FC<{
                                     },
                                 }}
                             />
+                            <div className="tracking-movie-id" id="tracking-movie-id" data-item-id={movieId} style={{ display: 'none' }}>{movieId}</div>
                         </div>
                     ))}
                 </div>
@@ -153,4 +156,4 @@ const TraierSection: FC<{
     );
 };
 
-export default TraierSection;
+export default TrailerSection;

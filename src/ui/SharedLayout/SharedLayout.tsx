@@ -63,7 +63,7 @@ export default function SharedLayout() {
             );
         } else {
             setSnackbarState({
-                text: "Login to add this movie to your favorite list",
+                text: "You've increased the interaction with this movie",
                 open: true,
             });
         }
@@ -127,22 +127,22 @@ export default function SharedLayout() {
                                 >
                                     <p className='font-bold'>Movies</p>
                                 </ListItemButton>
-                                <ListItemButton
+                                {/* <ListItemButton
                                     onClick={() => {
                                         setDrawerOpened(false);
                                         navigate(Screens.TVDiscover);
                                     }}
                                 >
                                     <p className='font-bold'>TV Shows</p>
-                                </ListItemButton>
-                                <ListItemButton
+                                </ListItemButton> */}
+                                {/* <ListItemButton
                                     onClick={() => {
                                         setDrawerOpened(false);
                                         navigate(Screens.About);
                                     }}
                                 >
                                     <p className='font-bold'>About</p>
-                                </ListItemButton>
+                                </ListItemButton> */}
                             </List>
                         </Drawer>
                         <Link
@@ -163,12 +163,12 @@ export default function SharedLayout() {
                         >
                             <p>TV Shows</p>
                         </Link> */}
-                        <Link
+                        {/* <Link
                             className='hidden md:block font-bold text-center'
                             to={Screens.About}
                         >
                             <p>About</p>
-                        </Link>
+                        </Link> */}
                     </div>
 
                     <div className='flex flex-row justify-center items-center'>
@@ -209,10 +209,10 @@ export default function SharedLayout() {
                                 <SVG_Search />
                             </div>
                         </div>
-                        <UserMenu
+                        {/* <UserMenu
                             user={user}
                             navigate={navigate}
-                        />
+                        /> */}
                     </div>
                 </div>
             </nav>

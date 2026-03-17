@@ -65,38 +65,38 @@ const router = createBrowserRouter([
                 path: MediaType.Movie + Screens.Detail,
                 element: <MovieDetail />,
             },
-            {
-                path: MediaType.TVShow + Screens.Detail,
-                element: <TVShowDetail />,
-            },
-            {
-                path: Screens.TVDiscover,
-                element: <TVShowDiscover />,
-            },
+            // {
+            //     path: MediaType.TVShow + Screens.Detail,
+            //     element: <TVShowDetail />,
+            // },
+            // {
+            //     path: Screens.TVDiscover,
+            //     element: <TVShowDiscover />,
+            // },
             {
                 path: Screens.MovieDiscover,
-                element: <MovieDiscover/>
+                element: <MovieDiscover />
             },
-            {
-                path: Screens.SignIn,
-                element: <SignIn/>,
-            },
-            {
-                path: Screens.SignUp,
-                element: <SignUp/>
-            },
-            {
-                path: Screens.About,
-                element: <About />,
-            },
-            {
-                path: Screens.History,
-                element: <History />,
-            },
-            {
-                path: Screens.Library,
-                element: <Library/>
-            },
+            // {
+            //     path: Screens.SignIn,
+            //     element: <SignIn/>,
+            // },
+            // {
+            //     path: Screens.SignUp,
+            //     element: <SignUp/>
+            // },
+            // {
+            //     path: Screens.About,
+            //     element: <About />,
+            // },
+            // {
+            //     path: Screens.History,
+            //     element: <History />,
+            // },
+            // {
+            //     path: Screens.Library,
+            //     element: <Library />
+            // },
             {
                 path: "*",
                 element: <NotFound />,

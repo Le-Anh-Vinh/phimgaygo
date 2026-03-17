@@ -101,14 +101,14 @@ const MovieDetail: FC<{}> = () => {
                             }}
                         >
                             <SVG_Play fill="black" />{" "}
-                            <span className={"text-black px-2 "}>Watch</span>
+                            <span className={"text-black px-2 "}></span>
                         </button>
                         <button
-                            className='p-2 m-1 rounded secondary flex'
+                            className='p-2 m-1 rounded secondary flex button-fav-movie'
                             onClick={() => handleFavorite(Number(id), currentMediaType)}
                         >
                             <SVG_Favorite fill="black" />{" "}
-                            <span className={"text-black px-2"}>Favorite</span>
+                            <span className={"text-black px-2"}>Notice</span>
                         </button>
                     </div>
                 </div>
@@ -144,7 +144,7 @@ const MovieDetail: FC<{}> = () => {
                         </div> */}
                     </section>
                     {videos.data && videos.data?.results.length !== 0 && (
-                        <TrailerSection videos={videos.data.results} />
+                        <TrailerSection videos={videos.data.results} movieId={Number(id)} />
                     )}
                     <section className={"p-4"}>
                         <h2

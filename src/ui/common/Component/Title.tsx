@@ -23,11 +23,13 @@ const Title: FC<{
     return (
         <div
             className={
-                "hover:scale-105 transition-all duration-500 transform-gpu"
+                "hover:scale-105 transition-all duration-500 transform-gpu tracker-item"
             }
             style={props.style}
+        // id="tracking-movie-id"
+        // data-item-id={props.id}
         >
-            <div id="tracking-movie-id" data-item-id={props.id} style={{ display: 'none' }}>{props.id}</div>
+            <div className="tracking-movie-id" id="tracking-movie-id" data-item-id={props.id} style={{ display: 'none' }}>{props.id}</div>
             <div
                 className={`shadow-xl rounded-sm relative cursor-pointer aspect-potrait sm:aspect-video ${props.className ?? ""
                     }`}

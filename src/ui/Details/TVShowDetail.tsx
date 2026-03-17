@@ -17,7 +17,7 @@ import getTVSeason from "../../data/DAO/Detail/getTVSeason";
 import { Season } from "../../data/model/TVShow/TVShow";
 import { Episode } from "../../data/model/TVShow/TVShowSeason";
 import SeeMoreBtn from "../common/Component/SeeMoreBtn";
-import TraierSection from "./common/TrailerSection";
+import TrailerSection from "./common/TrailerSection";
 import LabelAndExpand from "./common/LabelAndExpand";
 import { Button, ButtonGroup } from "@mui/material";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
@@ -189,7 +189,7 @@ const TVShowDetail: FC = () => {
                     >
                         {videos.data?.results &&
                             videos.data?.results.length !== 0 && (
-                                <TraierSection videos={videos.data?.results} />
+                                <TrailerSection videos={videos.data?.results} movieId={Number(id)} />
                             )}
                     </section>
 
