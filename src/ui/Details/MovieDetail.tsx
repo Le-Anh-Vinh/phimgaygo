@@ -354,6 +354,9 @@ const MovieDetail: FC<{}> = () => {
                             )}
                         />
                     )}
+                    <p className="font-bold text-2xl p-2 group cursor-pointer">More
+                        <p className="recommendation-div"></p>
+                    </p>
                 </div>
             </div>
         </div>

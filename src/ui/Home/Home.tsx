@@ -79,7 +79,7 @@ const Home: FC = () => {
                 btn1Icon={
                     <IconAndLabelWrap
                         icon={<SVG_Play fill="black" />}
-                        label={"Watch"}
+                        label={"Detail"}
                     />
                 }
                 btn1Action={(id, type) => {

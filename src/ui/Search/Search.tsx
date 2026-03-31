@@ -245,7 +245,7 @@ const Search: FC = () => {
             ) : (
                 Boolean(query) && (
                     <p className='text-center text-2xl'>
-                        Sorry, we can't find anything related to "{query}" :(
+                        Sorry, we can't find anything related to "{query}"
                     </p>
                 )
             )}
@@ -265,6 +265,9 @@ const Search: FC = () => {
                     />
                 </div>
             )}
+            <p className="font-bold text-3xl p-4 tracking-wider group">More recommendation
+                <p className="rec-search-div"></p>
+            </p>
         </div>
     );
 };

@@ -264,10 +264,6 @@ export default function SharedLayout() {
                 ref={footerRef}
             >
                 <Logo />
-                <p>by Nguyễn Quang Thông</p>
-                <a href={"mailto: nguyenquangthong292@gmail.com"}>
-                    nguyenquangthong292@gmail.com
-                </a>
                 <p>This website is for learning purpose</p>
                 <a href='https://github.com/thng292/phimgaygo'>
                     Link to the source code.
